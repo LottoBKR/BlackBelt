@@ -10,7 +10,7 @@ import com.bkr.blackbelt.models.User;
 public class HomeController {
     
     @GetMapping("/")
-    public String homePage(@ModelAttribute("user") User user){
+    public String homePage(@ModelAttribute("newUser") User user){
         return "home.jsp";
     }
 

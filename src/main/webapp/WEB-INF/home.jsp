@@ -14,34 +14,27 @@
 
                 <h2>Registrate</h2>
 
-                <div class="row">
-                    <form:label path="name">Name:</form:label>
-                    <form:input type="text" class="form-control" path="name"/>
-                </div>
+                <form:label path="name">Name:</form:label>
+                <form:input type="text" class="form-control" path="name"/>
                 <form:errors path="name" class="text-danger"/>
 
-                <div>
-                    <form:label path="email">Email:</form:label>
-                    <form:input type="text" class="form-control" path="email"/>
-                </div>
+                <form:label path="email">Email:</form:label>
+                <form:input type="text" class="form-control" path="email"/>
                 <form:errors path="email" class="text-danger"/>
 
-                <div>
-                    <form:label path="password">Password:</form:label>
-                    <form:input type="password" class="form-control" path="email"/>
-                </div>
+                <form:label path="password">Password:</form:label>
+                <form:input type="password" class="form-control" path="password"/>
                 <form:errors path="password" class="text-danger"/>
 
-                <div>
-                    <form:label path="passwordConfirm">Password Confirmation:</form:label>
-                    <form:input type="password" class="form-control" path="passwordConfirm"/>
-                </div>
+                <form:label path="passwordConfirm">Password Confirmation:</form:label>
+                <form:input type="password" class="form-control" path="passwordConfirm"/>
                 <form:errors path="passwordConfirm" class="text-danger"/>
 
                 <input type="submit" value="Resgister" class="btn btn-dark">
             </form:form>
+        </div>
 
-            <div class="col-6">
+        <div class="col-6">
 
 				<h2>Login</h2>
 				<p class="text-danger">${error_login}</p>
@@ -58,8 +51,8 @@
 					<input type="submit" class="btn btn-info mt-3" value="Login" />
 				</form>
 
-			</div>
         </div>
+
     </div>
 </body>
 </html>
