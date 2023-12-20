@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +39,7 @@
 				<h2>Login</h2>
 				<p class="text-danger">${error_login}</p>
 
-				<form action="/login" method="post">
+				<form action="/users/login" method="post">
 					<div>
 						<label>E-mail</label>
 						<input type="text" class="form-control" name="email" />

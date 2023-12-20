@@ -33,7 +33,7 @@ public class AppService {
         String password = newUser.getPassword();
         String confirm = newUser.getPasswordConfirm();
         if(!password.equals(confirm)) { //! -> Lo contrario
-            result.rejectValue("confirm", "Matches", "The passwords don't match");
+            result.rejectValue("passwordConfirm", "Matches", "The passwords don't match");
         }
 
         if(result.hasErrors()) {

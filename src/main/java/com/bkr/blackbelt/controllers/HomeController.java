@@ -11,7 +11,7 @@ public class HomeController {
     
     @GetMapping("/")
     public String homePage(@ModelAttribute("newUser") User user){
-        return "home.jsp";
+        return "users/home.jsp";
     }
 
 }

@@ -23,7 +23,7 @@ public class UserController {
     public String index(@ModelAttribute("newUser") User newUser,
                         Model model) {
 
-        return "home.jsp";
+        return "users/home.jsp";
     }
 
     @PostMapping("/register")
@@ -32,16 +32,13 @@ public class UserController {
                            HttpSession session,
                            Model model) {
 
-        //método en servicio
-        appService.register(newUser, result);
-
         if(result.hasErrors()) {
-
-            return "home.jsp";
+            return "users/home.jsp";
         } else {
             //Guardar sesión
+            appService.register(newUser, result);
             session.setAttribute("userInSession", newUser);
-            return "redirect:/dashboard";
+            return "redirect:/programs";
         }
 
     }
@@ -63,7 +60,7 @@ public class UserController {
         } else {
             //Guardamos en sesion
             session.setAttribute("userInSession", userLogin);
-            return "redirect:/dashboard";
+            return "redirect:/programs";
         }
 
 
